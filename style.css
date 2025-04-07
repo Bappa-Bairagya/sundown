@@ -23,7 +23,8 @@ body {
 }
 
 nav {
-
+position: relative;
+z-index: 100;
     width: 100%;
     display: flex;
     align-items: center;
@@ -46,6 +47,14 @@ nav {
     border-radius: 30px;
     position: relative;
 
+}
+nav h3{
+    padding: 12px 20px;
+    border: 1px solid rgba(0, 0, 0, 0.442);
+    border-radius: 30px;
+    cursor: pointer;
+    display: none;
+    font-weight: 600;
 }
 
 .nav-2 h4 a {
@@ -281,7 +290,7 @@ nav {
 }
 
 #page3 {
-    min-height: 100vh;
+    min-height: 50vh;
     width: 100%;
     padding: 0 0 4vw 0;
     background-color: #efeae3;
@@ -335,7 +344,7 @@ nav {
 
 #page4 {
     margin: 0;
-    height: 70vh;
+    min-height: 70vh;
     width: 100%;
     background-color: #efeae3;
     padding: 2vw;
@@ -352,6 +361,7 @@ nav {
     padding-left:2vw;
     padding-right: 4vw;
     cursor: pointer;
+    min-width: 50vw;
 }
 .swiper-slide p{
     padding-top: 2vw;
@@ -374,7 +384,7 @@ nav {
 }
 
 #page5 {
-    height: 120vh;
+    min-height: 120vh;
     width: 100%;
     background-color: transparent;
 }
@@ -382,7 +392,7 @@ nav {
 .footer {
     position: fixed;
     height: 100vh;
-    width: 100%;
+    width: 100vw;
     bottom: 0;
     z-index: -9;
     background-color: black;
@@ -424,6 +434,7 @@ nav {
     justify-content: space-between;
     background-color: #fe4416;
     filter: blur(25px);
+   
 }
 
 #h {
@@ -432,6 +443,7 @@ nav {
     width: 30vw;
     background-color: #FE330A;
     border-radius: 50%;
+    
 }
 
 .ani1 {
@@ -490,7 +502,7 @@ nav {
 }
 @keyframes load {
     0%{
-
+opacity: 0;
     }
     10%{
 opacity: 1;
@@ -499,6 +511,154 @@ opacity: 1;
 opacity: 1;
     }
     100%{
-
+opacity: 0;
     }
+}
+#slid{
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.333);
+    position: fixed;
+    z-index: 9;
+    top: -100%;
+    transition: all ease 1s;
+}
+#slid2{
+    height: 50%;
+    width: 100%;
+    background-color: #efeae3;
+    border-radius: 25px;
+    
+}
+#slid2 div{
+    height: 10vw;
+    width: 100%;
+    background-color: #efeae3;
+    padding-top: 35vw;
+    padding-left: 2vw;
+}
+#slid2 div h1{
+    margin-bottom: 2vw;
+}
+@media (max-width:600px) {
+    nav img{
+        scale: 1;
+        transition: all ease 0.2s;
+    }
+    .nav-2{
+        display: none;
+    }
+    nav h3{
+        display: block;
+    }
+    nav{
+        background-color: #efeae3;
+        padding: 2vw 5vw;
+    }
+    #page1{
+        padding: 0;
+    }
+    .center {
+        height: 50vh;
+        width: 100%;
+    align-items: flex-end;
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: space-between;
+        border-bottom: 1px solid black;
+        padding-bottom: 6vw;
+        padding-left: 4vw;
+        padding-right: 8vw;
+    }
+    
+    #left {
+        width: 100%;
+    }
+    
+    #left h4 {
+        width: 90%;
+        font-size: 4.8vw;
+        line-height: 6vw;
+    }
+    
+    #right {
+        width: 100%;
+    }
+    
+    #right h1 {
+        margin-top: 5vw;
+        font-size: 15vw;
+        line-height: 13vw;
+        text-align: right;
+    }
+    .hero-shap {
+        height: 40vw;
+        width: 50vw;
+        background: linear-gradient(#FE330A, #fe3116);
+        position: absolute;
+        right: 0;
+        border-top-left-radius: 50%;
+        border-bottom-left-radius: 50%;
+        filter: blur(20px);
+        top: 50vh;
+    }
+    .circle {
+        height: 4vw;
+        width: 4vw;
+        border-radius: 50%;
+        background-color: #FE330A;
+        display: inline-block;
+        margin: 1vw 2vw;
+    }
+    .page2-bottom {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 4vw 0vw;
+        position: relative;
+        z-index: 9;
+        flex-direction: column;
+    }
+    
+    .page2-bottom h1 {
+        font-size: 6vw;
+        width: 87%;
+    }
+    
+    .bottom-part2 {
+        width: 70%;
+        padding-top: 10vw ;
+        padding-left: 5vw;
+    }
+    
+    .bottom-part2 img {
+        width: 100%;
+        border-radius: 15px;
+    
+    }
+    
+    .bottom-part2 p {
+        margin-top: 3vw;
+        font-size: 4vw;
+    }
+    .hero {
+        height: 60vw;
+        width: 60vw;
+        background: linear-gradient(#FE330A, #fe4416);
+        position: absolute;
+        filter: blur(25px);
+        border-radius: 50%;
+    }
+   .elem{
+    height: 60px;
+   }
+   #h {
+    filter: blur(35px);
+    height: 60vw;
+    width: 60vw;
+    background-color: #FE330A;
+    border-radius: 50%;
+    
+}
+    
 }
