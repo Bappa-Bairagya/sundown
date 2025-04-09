@@ -33,11 +33,11 @@ var swiper = new Swiper(".mySwiper", {
     },
 });
 
-// var loader = document.querySelector("#loader"); // Selects the element with id "loader"
+var loader = document.querySelector("#loader"); // Selects the element with id "loader"
 
-// setTimeout(function() {
-//     loader.style.top = "-100%"; // Moves the loader up by 100% (presumably out of view)
-// }, 4000); // Executes after 2000 milliseconds (2 seconds)
+setTimeout(function() {
+    loader.style.top = "-100%"; // Moves the loader up by 100% (presumably out of view)
+}, 4000); // Executes after 2000 milliseconds (2 seconds)
 var slid=document.querySelector("#slid")
 var menu=document.querySelector("nav h3")
 var navimg=document.querySelector("nav img")
